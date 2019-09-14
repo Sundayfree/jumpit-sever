@@ -164,9 +164,8 @@ const forgetPassword = async (req, res) => {
 };
 const sendEmail = async (req, res) => {
   const { email } = req.body;
-
   const code = Math.floor(100000 + Math.random() * 900000);
-
+  console.log(email);
   let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
